@@ -1,0 +1,21 @@
+<h1> Rxjs </h1>
+<div>
+Timer:
+  <div [formGroup]="fg">
+   Timer Value in ms: <input matInput placeholder="100"  type="text" formControlName="timerLength" required > 
+  </div>
+
+  <button mat-raised-button color="primary" (click)=start()>start </button>
+  <button mat-flat-button color="secondary" (click)=stop()>stop </button>
+  <button mat-raised-button color="primary" (click)=clear()>clear </button>
+
+
+
+</div>
+<div>
+  
+    <li *ngFor="let i of valArray">
+      {{ i }}
+    </li>
+ 
+</div>

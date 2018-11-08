@@ -1,0 +1,29 @@
+<p>
+    StarWars Planets:
+  </p>
+  <button mat-raised-button (click)= "getData()">Load Planets</button>
+  <button mat-raised-button color="primary" (click)=loadNext(this.nextLink) [disabled]="this.nextLink === null" > Load Next Dataset </button>
+   
+  <mat-list>
+  
+      <mat-list-item *ngFor="let planet of dataArray">
+        <h4 mat-line>name: {{planet.name}}</h4>
+        <h4 mat-line>rotation_period: {{planet.rotation_period}}</h4>
+        <h4 mat-line>orbital_period: {{planet.orbital_period}}</h4>
+        <h4 mat-line>diameter: {{planet.diameter}}</h4>
+        <h4 mat-line>climate: {{planet.climate}}</h4>
+        <h4 mat-line>gravity: {{planet.gravity}}</h4>
+        <h4 mat-line>terrain: {{planet.terrain}}</h4>
+        <h4 mat-line>surface_water: {{planet.surface_water}}</h4>
+        <h4 mat-line>population: {{planet.population}}</h4>
+        <h4 mat-line>residents: {{planet.residents}}| json</h4>
+        <h4 mat-line>films: {{planet.films}}|json</h4>
+        <h4 mat-line>Created date: {{planet.created}}</h4>
+        <h4 mat-line>Edited dat: {{planet.edited}}</h4>
+        <h4 mat-line>Further URL:   {{planet.url}}</h4>
+  
+      </mat-list-item>
+  
+    </mat-list>
+  
+   

@@ -1,0 +1,33 @@
+<p>
+    StarWars Species:
+  </p>
+  <button mat-raised-button (click)= "getData()">Load Films</button>
+  <button mat-raised-button color="primary" (click)=loadNext(this.nextLink) [disabled]="this.nextLink === null" > Load Next Dataset </button>
+   
+  <mat-list>
+  
+      <mat-list-item *ngFor="let species of dataArray">
+  
+        <h4 mat-line>name: {{species.name}}</h4>
+        <h4 mat-line>classification: {{species.classification}}</h4>
+        <h4 mat-line>designation: {{species.designation}}</h4>
+        <h4 mat-line>average_height: {{species.average_height}}</h4>
+        <h4 mat-line>skin_colors: {{species.skin_colors}}</h4>
+        <h4 mat-line>hair_colors: {{species.hair_colors}}</h4>
+        <h4 mat-line>eye_colors: {{species.eye_colors}}</h4>
+        <h4 mat-line>average_lifespan: {{species.average_lifespan}}</h4>
+        <h4 mat-line>language: {{species.language}}</h4>
+        <h4 mat-line>homeworld: {{species.homeworld}}</h4>
+        <h4 mat-line>films: {{species.films |json }}</h4>
+        <h4 mat-line>people: {{species.people |json}} </h4>
+        <h4 mat-line>Created date: {{species.created}}</h4>
+        <h4 mat-line>Edited dat: {{species.edited}}</h4>
+        <h4 mat-line>Further URL:   {{species.url}}</h4>
+        
+  
+      </mat-list-item>
+  
+    </mat-list>
+
+  
+  

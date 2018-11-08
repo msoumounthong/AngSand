@@ -1,0 +1,33 @@
+<div class="menu">
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+      <button mat-menu-item >
+          <a routerLink="/home" routerLinkActive="home">Home</a>
+        </button>
+    <button mat-menu-item (click)= "dostuff()">
+      <a routerLink="/swapi" routerLinkActive="active">SWAPI</a>
+    </button>
+    <a routerLink="/films" routerLinkActive="active">
+    <button mat-menu-item>Films</button>
+    </a>
+    <a routerLink="/planets" routerLinkActive="active">
+    <button mat-menu-item>planets</button>
+    </a>
+    <a routerLink="/species" routerLinkActive="active">
+    <button mat-menu-item>species</button>
+    </a>
+    <a routerLink="/starship" routerLinkActive="active">
+    <button mat-menu-item>starship</button>
+    </a>
+    <a routerLink="/vehicle" routerLinkActive="active">
+    <button mat-menu-item>vehicle</button>
+    </a>
+    <a routerLink="/StarWarsForm" routerLinkActive="active">
+      <button mat-menu-item>StarWars</button>
+    </a>
+    <a routerLink="/RxjsSamples" routerLinkActive="active">
+      <button mat-menu-item>Rxjs</button>
+    </a>
+
+  </mat-menu>
+</div>

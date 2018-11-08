@@ -1,0 +1,25 @@
+<h4>mat select</h4>
+<mat-form-field>
+  <mat-select placeholder="Favorite animal" [formControl]="displayControl" required>
+    <mat-option>--</mat-option>
+    <mat-option [value]=1>films</mat-option>
+    <mat-option [value]=2>planet</mat-option>
+    <mat-option [value]=3>species</mat-option>
+    <mat-option [value]=4>starship</mat-option>
+    <mat-option [value]=5>vehicles</mat-option>
+    
+  </mat-select>
+  <mat-error *ngIf="displayControl.hasError('required')">Please choose an animal</mat-error>
+  
+</mat-form-field>
+<div *ngIf="displayControl.value==1"><app-films></app-films></div>
+<div *ngIf="displayControl.value==2"><app-planet></app-planet></div>
+<div *ngIf="displayControl.value==3"><app-species></app-species></div>
+<div *ngIf="displayControl.value==4"><app-starship></app-starship></div>
+<div *ngIf="displayControl.value==5"><app-vehicle></app-vehicle></div>
+
+
+<div>
+  <h1> testing:</h1>
+    {{intarray}}
+</div>

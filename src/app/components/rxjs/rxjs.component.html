@@ -1,0 +1,13 @@
+<p>
+  rxjs works!
+</p>
+<button color=primary (click)=displayAll()>display all</button>
+<button (click)=dostuff()>dosstuff</button>
+<button (click)=evens()>filter evens</button>
+<button (click)=odds()>filter odds</button>
+<button (click)=resetData()>Reset Data</button>
+<ul>
+    <li *ngFor="let item of this.display; let i = index">
+      {{i}} {{item}}
+    </li>
+  </ul>

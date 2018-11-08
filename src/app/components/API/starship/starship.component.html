@@ -1,0 +1,30 @@
+<p>
+    StarWars Starships:
+  </p>
+  <button mat-raised-button (click)= "getData()">Load Films</button>
+  <button mat-raised-button color="primary" (click)=loadNext(this.nextLink) [disabled]="this.nextLink === null" > Load Next Dataset </button>
+   
+  <mat-list>
+  
+      <mat-list-item *ngFor="let starship of dataArray">
+  {{film|json}}
+      <h4 mat-line>name: {{starship.name}}</h4>
+      <h4 mat-line>model: {{starship.model}}</h4>
+      <h4 mat-line>manufacturer: {{starship.manufacturer}}</h4>
+      <h4 mat-line>cost_in_credits: {{starship.cost_in_credits}}</h4>
+      <h4 mat-line>length: {{starship.length}}</h4>
+      <h4 mat-line>max_atmosphering_speed: {{starship.max_atmosphering_speed}}</h4>
+      <h4 mat-line>passengers: {{starship.passengers}}</h4>
+      <h4 mat-line>cargo_capacity: {{starship.cargo_capacity}}</h4>
+      <h4 mat-line>consumables: {{starship.consumables}}</h4>
+      <h4 mat-line>hyperdrive_rating: {{starship.hyperdrive_rating}}</h4>
+      <h4 mat-line>MGLT: {{starship.MGLT}}</h4>
+      <h4 mat-line>starship_class: {{starship.starship_class}}</h4>
+      <h4 mat-line>pilots: {{starship.pilots | json}} </h4>
+      <h4 mat-line>Created date: {{starship.created}}</h4>
+      <h4 mat-line>Edited dat: {{starship.edited}}</h4>
+      <h4 mat-line>Further URL:   {{starship.url}}</h4>
+  
+      </mat-list-item>
+  
+    </mat-list>

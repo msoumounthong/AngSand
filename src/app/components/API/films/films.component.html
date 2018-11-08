@@ -1,0 +1,29 @@
+<p>
+  StarWars Films:
+</p>
+<button mat-raised-button (click)= "getData()">Load Films</button>
+<button mat-raised-button color="primary" (click)=loadNext(this.nextLink) [disabled]="this.nextLink === null" > Load Next Dataset </button>
+ 
+<mat-list>
+
+    <mat-list-item *ngFor="let film of dataArray">
+
+      <h4 mat-line>Title: {{film.title}}</h4>
+      <h4 mat-line>Episode_id: {{film.episode_id}}</h4>
+      <h4 mat-line>Opening_crawl: {{film.opening_crawl}}</h4>
+      <h4 mat-line>Director: {{film.director}}</h4>
+      <h4 mat-line>Producer: {{film.producer}}</h4>
+      <h4 mat-line>Release_date: {{film.release_date}}</h4>
+      <h4 mat-line>Characters: {{film.characters| json}}</h4>
+      <h4 mat-line>Planets List: {{film.planets| json}}</h4>
+      <h4 mat-line>Species List: {{film.species| json}}</h4>
+      <h4 mat-line>Vehicles List: {{film.vehicles| json}}</h4>
+      <h4 mat-line>Starship List:{{film.starships| json}}</h4>
+      <h4 mat-line>Created date: {{film.created}}</h4>
+      <h4 mat-line>Edited dat: {{film.edited}}</h4>
+      <h4 mat-line>Further URL:   {{film.url}}</h4>
+
+    </mat-list-item>
+
+  </mat-list>
+

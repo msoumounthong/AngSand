@@ -1,0 +1,31 @@
+<p>
+  A list of all the people in Star wars
+</p>
+<br>
+{{this.nextLink}}
+<br>
+<button mat-raised-button color="primary" (click)=loadNext(this.nextLink) [disabled]="this.nextLink === null" > Load Next Dataset </button>
+  <mat-list>
+
+    <mat-list-item *ngFor="let people of dataArray">
+
+      <h4 mat-line>Name: {{people.name}}</h4>
+      <h4 mat-line>Height: {{people.height}}</h4>
+      <h4 mat-line>Mass: {{people.mass}}</h4>
+      <h4 mat-line>Hair Color: {{people.hair_color}}</h4>
+      <h4 mat-line>Skin Color: {{people.skin_color}}</h4>
+      <h4 mat-line>Eye Color: {{people.eye_color}}</h4>
+      <h4 mat-line>Birth Year: {{people.birth_year}}</h4>
+      <h4 mat-line>Gender: {{people.gender}}</h4>
+      <h4 mat-line>Homeword: {{people.homeworld}}</h4>
+      <h4 mat-line>Film List: {{people.films| json}}</h4>
+      <h4 mat-line>Species List: {{people.species| json}}</h4>
+      <h4 mat-line>Vehicles List: {{people.vehicles| json}}</h4>
+      <h4 mat-line>Starship List:{{people.starships| json}}</h4>
+      <h4 mat-line>Created date: {{people.created}}</h4>
+      <h4 mat-line>Edited dat: {{people.edited}}</h4>
+      <h4 mat-line>Further URL:   {{people.url}}</h4>
+
+    </mat-list-item>
+
+  </mat-list>

@@ -1,0 +1,28 @@
+<p>
+    StarWars Vehicles:
+  </p>
+  <button mat-raised-button (click)= "getData()">Load Films</button>
+  <button mat-raised-button color="primary" (click)=loadNext(this.nextLink) [disabled]="this.nextLink === null" > Load Next Dataset </button>
+   
+  <mat-list>
+  
+      <mat-list-item *ngFor="let vehicle of dataArray">
+        <h4 mat-line>name: {{vehicle.name}}</h4>
+        <h4 mat-line>model: {{vehicle.model}}</h4>
+        <h4 mat-line>manufacturer: {{vehicle.manufacturer}}</h4>
+        <h4 mat-line>cost_in_credits: {{vehicle.cost_in_credits}}</h4>
+        <h4 mat-line>length: {{vehicle.length}}</h4>
+        <h4 mat-line>max_atmosphering_speed: {{vehicle.max_atmosphering_speed}}</h4>
+        <h4 mat-line>crew: {{vehicle.crew}}</h4>
+        <h4 mat-line>passengers: {{vehicle.passengers}}</h4>
+        <h4 mat-line>cargo_capacity: {{vehicle.cargo_capacity}}</h4>
+        <h4 mat-line>consumables: {{vehicle.consumables}}</h4>
+        <h4 mat-line>vehicle_class: {{vehicle.vehicle_class | json}}|</h4>
+        <h4 mat-line>pilots: {{vehicle.pilots | json}}</h4>
+        <h4 mat-line>Created date: {{vehicle.created}}</h4>
+        <h4 mat-line>Edited dat: {{vehicle.edited}}</h4>
+        <h4 mat-line>Further URL:   {{vehicle.url}}</h4>
+  
+      </mat-list-item>
+  
+    </mat-list>
